@@ -4,7 +4,7 @@ La sección se enfoca en los siguientes temas:
 2. Reforzamiento de ES6 y ES7
 	a) Let vs Var
 	b) Template literales
-	c) Destructuración
+	c) Desestructuración
 	d) Funciones de flecha
 	e) Callbacks y callbacks en cadena
 	f) Promesas y promesas en cadena
