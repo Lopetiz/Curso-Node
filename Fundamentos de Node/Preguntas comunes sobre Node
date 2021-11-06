@@ -1,0 +1,27 @@
+1. ¿Qué es Node?
+  a) Lenguaje de Backend.
+  b) Acceso al sistema de archivos del equipo.
+  c) Información del Sistema Operativo.
+  d) Procesos del equipo.
+  
+2. ¿Qué puedo hacer con Node?
+  a) Uso de Sockets para una comunicación real Cliente-Servidor.
+  b) Manejo de archivos en FileSystem, cargas simultáneas.
+  c) Servidores locales y remotos con información en tiempo real.
+  d) Conexiones a base de datos.
+  e) Creación de servicios REST en segundos.
+  
+3. ¿Por qué es tan popular?
+  a) Entradas y salidas que no realizan bloqueos del servidor.
+  b) Es sumamente rápido y fácil de configurar.
+  c) Más de 470 mil paquetes disponibles (el ecosistema con más librerías en el mundo).
+  d) Si sabes JavaScript, ya conoces la mayor parte de Node.
+  
+4. ¿Quienes lo usan?
+  a) Netflix
+  b) Paypal
+  c) Linkedin
+  d) Walmart
+  e) Uber
+  f) Ebay
+  g) NASA 
