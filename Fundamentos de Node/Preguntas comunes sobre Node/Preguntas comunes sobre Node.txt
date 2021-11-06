@@ -18,10 +18,10 @@
   d) Si sabes JavaScript, ya conoces la mayor parte de Node.
   
 4. ¿Quienes lo usan?
-  a) Netflix
-  b) Paypal
-  c) Linkedin
-  d) Walmart
-  e) Uber
-  f) Ebay
-  g) NASA 
+  a) Netflix.
+  b) Paypal.
+  c) Linkedin.
+  d) Walmart.
+  e) Uber.
+  f) Ebay.
+  g) NASA.
