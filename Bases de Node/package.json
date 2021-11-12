@@ -1,6 +1,6 @@
 {
   "name": "bases-de-node",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Es una simple tabla de multiplicar con archivo de texto",
   "main": "app.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "author": "José Manuel López Ortiz",
   "license": "MIT",
   "dependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "yargs": "^17.2.1"
   }
 }
