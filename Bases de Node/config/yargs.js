@@ -10,7 +10,6 @@ const argv = require('yargs')
     .option('l', {
         alias: 'listar',
         type: 'boolean',
-        demandOption: true,
         default: false,
         describe: 'Muestra la tabla en consola'
     })
