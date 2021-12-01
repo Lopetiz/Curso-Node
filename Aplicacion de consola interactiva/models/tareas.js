@@ -2,7 +2,9 @@ const Tarea = require("./tarea");
 
 class Tareas {
 
-    get _listadoArr() {
+   _listado = {}
+
+    get listadoArr() {
 
         const listado = [];
         Object.keys(this._listado).forEach( key => {
@@ -14,10 +16,8 @@ class Tareas {
 
     }
 
-    constructor( desc ) {
-
-        this._listado = {};
-
+    constructor() {
+        this.listado = {};
     }
 
     crearTarea( desc = '' ) {
