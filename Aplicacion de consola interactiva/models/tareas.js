@@ -2,7 +2,9 @@ const Tarea = require("./tarea");
 
 class Tareas {
 
-   _listado = {}
+   _listado = {
+       'abc': 123
+   };
 
     get listadoArr() {
 
@@ -18,6 +20,14 @@ class Tareas {
 
     constructor() {
         this._listado = {};
+    }
+
+    borrarTarea ( id = '' ) {
+
+        if ( this._listado[id] ) {
+            delete this._listado[id];
+        }
+
     }
 
     cargarTareasFromArray( tareas = [] ) {
@@ -41,13 +51,41 @@ class Tareas {
         console.log();
         this.listadoArr.forEach( (tarea, i) => {
 
-            const idx = `${i + 1}`.cyan;
+            const idx = i + 1;
             const { desc, completadoEn } = tarea;
             const estado = ( completadoEn )
                 ? 'Completada'.green
                 : 'Pendiente'.red;
             
-            console.log( `${ idx } ${ desc } :: ${ estado }`);
+            console.log( `${ idx + '. '}`.magenta + `${ desc } :: ${ estado }`);
+
+        })
+
+    }
+
+    listarPendientesCompletadas ( completadas = true ) {
+
+        console.log();
+        let contador = 0;
+        this.listadoArr.forEach( tarea => {
+
+            const { desc, completadoEn } = tarea;
+            const estado = ( completadoEn )
+                ? 'Completada'.green
+                : 'Pendiente'.red;
+            if ( completadas ) {
+                // Mostrar completadas
+                if ( completadoEn ) {
+                    contador += 1;
+                    console.log( `${ (contador + '.').magenta } ${ desc } :: ${ estado }`);
+                }
+            } else {
+                // Mostrar pendientes
+                if ( !completadoEn ) {
+                    contador += 1;
+                    console.log( `${ (contador + '.').magenta } ${ desc } :: ${ estado }`);
+                }
+            }
 
         })
 

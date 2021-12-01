@@ -3,7 +3,9 @@ require('colors');
 const { guardarDB, leerDB } = require('./helpers/guardarArchivo');
 const { inquirerMenu,
         pausa,
-        leerInput } = require('./helpers/inquirer');
+        leerInput,
+        listadoTareasBorrar
+     } = require('./helpers/inquirer');
 
 const Tareas = require('./models/tareas');
 
@@ -25,14 +27,30 @@ const main = async() => {
         opt = await inquirerMenu();
         
         switch (opt) {
-            case '1':
-                // Crear opcion
+            case '1': // Crear tarea
                 const desc = await leerInput('Descripción:');
                 tareas.crearTarea( desc );
             break;
 
-            case '2':
+            case '2': // Listar tareas
                 tareas.listadoCompleto();
+            break;
+
+            case '3': // Listar tareas completadas
+                tareas.listarPendientesCompletadas(true);
+            break;
+
+            case '4': // Listar tareas pendientes
+                tareas.listarPendientesCompletadas(false);
+            break;
+
+            case '5':
+                
+            break;
+
+            case '6': // Borrar tarea
+                const id = await listadoTareasBorrar ( tareas.listadoArr );
+                console.log({ id });
             break;
         }
 
