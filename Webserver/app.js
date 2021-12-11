@@ -1,24 +1,36 @@
 const express = require('express')
+const hbs = require('hbs');
+
 const app = express()
 const port = 8080;
 
-
+// Handlebars
 app.set('view engine', 'hbs');
+hbs.registerPartials(__dirname + '/views/partials');
  
 // Servir contenido estático
 app.use( express.static('public') );
 
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home', {
+        nombre: 'Jose Manuel Lopez Ortiz',
+        titulo: 'Curso de Node'
+    });
 });
 
 app.get('/generic', (req, res) => {
-    res.sendFile( __dirname + '/public/generic.html')
+    res.render('generic', {
+        nombre: 'Jose Manuel Lopez Ortiz',
+        titulo: 'Generico'
+    });
 });
 
 app.get('/elements', (req, res) => {
-    res.sendFile( __dirname + '/public/elements.html')
+    res.render('elements', {
+        nombre: 'Jose Manuel Lopez Ortiz',
+        titulo: 'Elementos'
+    });
 });
 
 app.get('*', (req, res) => {
